@@ -1,5 +1,6 @@
 body, input, select, option, label {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 .container {
