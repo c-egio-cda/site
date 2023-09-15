@@ -14,9 +14,9 @@
     <div class="container">
         <div class="content">
             <?php
-            function receiveData($array): bool
+            function receiveData($array, array $keyToFind): bool
             {
-                $keyToFind = ['name', 'first-name', 'email', 'age', 'country'];
+                
                 foreach ($keyToFind as $key) {
                     if (!array_key_exists($key, $array)) {
                         return false;
@@ -33,7 +33,7 @@
                 return $data;
             }
 
-            if (receiveData($_GET)) {
+            if (receiveData($_GET,['name', 'first-name', 'email', 'age', 'country'])) {
                 $name = cleanData($_GET['name']);
                 $fName = cleanData($_GET['first-name']);
                 $email = cleanData($_GET['email']);
